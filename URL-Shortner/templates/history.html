@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} History {% endblock %}
+
+{% block body %}
+<br />
+<h3>This is the page where you can see all the previously shortened URLs</h3>
+<br />
+<table class="table table-hover table-dark">
+    <tr>
+        <th scope="col">S.No:</th>
+        <th scope="col">Original-Url</th>
+        <th scope="col">Shorten-Url</th>
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td scope="row">{{d.id}}</td>
+        <td scope="row">{{d.original_url}}</td>
+        <td scope="row">http://127.0.0.1:5000/{{d.shorten_url}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

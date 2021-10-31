@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Result{% endblock %}
+{% block body %}
+<center>
+    <div class="button_box">
+      <center><h2>Your Generated Result</h2></center>
+  <br>
+        
+      <form class="form-wrapper-2 cf" action="/" method="post">
+    <input type="text" value="127.0.0.1:5000/{{ data }}" id="mylink" required autofocus>
+    <button class="btn btn-primary" onclick="myFunction()">Copy</button>
+  </form>
+
+    </div>
+  </center>
+{% endblock %}
